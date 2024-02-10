@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* general styles*/
+a {
+  color: white;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  color: white;
+}
+
+.orange {
+  color: rgb(210, 153, 46);
+}
+
+.btn {
+  padding: 13px 20px;
+  background-color: rgb(37, 36, 36);
+}
+
+.btn:hover {
+  background-color: whitesmoke;
+  color: rgb(210, 153, 46);
+}
+
+/* header styles*/
+
+nav {
+  background-color: rgb(36, 34, 34);
+}
+
+.nav-container {
+  margin: 0 auto;
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  color: whitesmoke;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+ul {
+  margin-left: auto;
+  display: flex;
+  gap: 1.2em;
+  padding: 1.2em;
+}
+
+ul li a {
+  padding: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+ul li a:hover {
+  color: rgb(210, 153, 46);
+  background-color: rgb(58, 57, 57);
+}
+
+/*hero section*/
+
+.hero {
+  background-image: url("../img/showcase.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+  color: whitesmoke;
+  grid-column: 1/ -1;
+}
+
+h2 {
+  font-size: 5em;
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+
+p {
+  font-size: 1.1em;
+  padding-bottom: 1.5em;
+}
