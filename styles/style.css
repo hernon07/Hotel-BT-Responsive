@@ -45,12 +45,11 @@ nav {
 
 h1 {
   color: whitesmoke;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 0.5rem + 1.6vw, 1.8rem);
   font-weight: bold;
 }
 
 ul {
-  margin-left: auto;
   display: flex;
   gap: 1.2em;
   padding: 1.2em;
@@ -58,13 +57,31 @@ ul {
 
 ul li a {
   padding: 1.2rem;
-  font-size: 1.1rem;
+  font-size: clamp(0.8rem, 0rem + 1.6vw, 1.1rem);
   font-weight: bold;
 }
 
 ul li a:hover {
   color: rgb(210, 153, 46);
   background-color: rgb(58, 57, 57);
+}
+
+@media (max-width: 400px) {
+  ul {
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 0.8rem;
+  }
+  .nav-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  ul li a {
+    display: grid;
+    place-content: center;
+    padding: 5px;
+  }
 }
 
 /*hero section*/
@@ -76,11 +93,11 @@ ul li a:hover {
   background-size: cover;
   text-align: center;
   color: whitesmoke;
-  grid-column: 1/ -1;
+  min-height: 500px;
 }
 
 h2 {
-  font-size: 5em;
+  font-size: clamp(1.5rem, 3rem + 1.2vw, 5rem);
   padding-top: 2em;
   padding-bottom: 1em;
 }
@@ -88,4 +105,53 @@ h2 {
 p {
   font-size: 1.1em;
   padding-bottom: 1.5em;
+}
+
+/* section 2 styles*/
+
+.sec-2 {
+  display: flex;
+  min-height: 400px;
+  background-color: rgb(54, 53, 53);
+  color: whitesmoke;
+  padding: 2em;
+}
+.img {
+  display: grid;
+  place-content: center;
+  padding-bottom: 2em;
+}
+.img img {
+  width: 100%;
+  border-radius: 20px;
+}
+.sec-2 > * {
+  flex: 1 1 50%;
+}
+.text {
+  text-align: center;
+}
+h3 {
+  font-size: 2em;
+  padding-bottom: 0.5em;
+}
+p {
+  font-size: 1.2em;
+  padding: 2em;
+  line-height: 1.5em;
+}
+@media (max-width: 800px) {
+  .sec-2 {
+    flex-direction: column;
+  }
+}
+
+/*footer style*/
+
+footer {
+  background-color: black;
+  color: whitesmoke;
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: bold;
 }
